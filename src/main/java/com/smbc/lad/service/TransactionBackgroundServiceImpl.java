@@ -161,10 +161,11 @@ public class TransactionBackgroundServiceImpl implements TransactionBackgroundSe
 			fileData.setId(transactionFilesEntity.getId());
 			fileData.setPipelineId(transactionFilesEntity.getPipelineId());
 			fileData.setFileType(transactionFilesEntity.getFileType());
+			fileData.setFileExtension(transactionFilesEntity.getFileExtension());
+			fileData.setFileExtensionMetadata(transactionFilesEntity.getFileExtensionMetadata());
 			fileData.setFileData(transactionFilesEntity.getFileData());
 			
 			  String s = new String(transactionFilesEntity.getFileData(), StandardCharsets.UTF_8);
-			  System.out.println("File ..." + s);
 		}
 		
 		return fileData;
