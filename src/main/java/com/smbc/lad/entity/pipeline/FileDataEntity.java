@@ -49,6 +49,9 @@ public class FileDataEntity {
 	
 	@Column(name = "file_extension")
 	private String fileExtension;
+
+	@Column(name = "file_extension_metadata")
+	private String fileExtensionMetadata;
 	
 	@Lob
 	@Column(name = "file_data")
@@ -97,6 +100,14 @@ public class FileDataEntity {
 
 	public void setFileExtension(String fileExtension) {
 		this.fileExtension = fileExtension;
+	}
+
+	public String getFileExtensionMetadata() {
+		return fileExtensionMetadata;
+	}
+
+	public void setFileExtensionMetadata(String fileExtensionMetadata) {
+		this.fileExtensionMetadata = fileExtensionMetadata;
 	}
 
 	public byte[] getFileData() {
