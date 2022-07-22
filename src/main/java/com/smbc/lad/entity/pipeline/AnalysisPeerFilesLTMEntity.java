@@ -50,6 +50,9 @@ public class AnalysisPeerFilesLTMEntity {
 	@Column(name = "file_extension")
 	private String fileExtension;
 	
+	@Column(name = "file_extension_metadata")
+	private String fileExtensionMetadata;
+	
 	@Lob
 	@Column(name = "file_data")
 	private byte[] fileData;
@@ -99,6 +102,14 @@ public class AnalysisPeerFilesLTMEntity {
 		this.fileExtension = fileExtension;
 	}
 
+	public String getFileExtensionMetadata() {
+		return fileExtensionMetadata;
+	}
+
+	public void setFileExtensionMetadata(String fileExtensionMetadata) {
+		this.fileExtensionMetadata = fileExtensionMetadata;
+	}
+	
 	public byte[] getFileData() {
 		return fileData;
 	}
