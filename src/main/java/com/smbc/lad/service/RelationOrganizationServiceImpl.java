@@ -58,6 +58,7 @@ public class RelationOrganizationServiceImpl implements RelationOrganizationServ
 					fileData.setFileName(fileDataEntity.getFileName());
 					fileData.setFileType(fileDataEntity.getFileType());
 					fileData.setFileExtension(fileDataEntity.getFileExtension());
+					fileData.setFileExtensionMetadata(fileDataEntity.getFileExtensionMetadata());
 					fileData.setFileData(fileDataEntity.getFileData());
 					fileData.setCreatedTimestamp(
 							LADUtils.formatDatetoTimestamp(fileDataEntity.getCreatedDate()));
@@ -94,6 +95,7 @@ public class RelationOrganizationServiceImpl implements RelationOrganizationServ
 					fileDataEntity.setFileName(file.getFileName());
 					fileDataEntity.setFileType(file.getFileType());
 					fileDataEntity.setFileExtension(file.getFileExtension());
+					fileDataEntity.setFileExtensionMetadata(fileDataEntity.getFileExtensionMetadata());
 					if(file.getFileBase64Data() != null) {
 						byte[] fileByte = Base64.getDecoder().decode(file.getFileBase64Data());
 						fileDataEntity.setFileData(fileByte);
