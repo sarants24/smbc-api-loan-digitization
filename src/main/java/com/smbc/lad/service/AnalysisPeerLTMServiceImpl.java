@@ -66,6 +66,7 @@ public class AnalysisPeerLTMServiceImpl implements AnalysisPeerLTMService {
 					fileData.setFileName(analysisFileEntity.getFileName());
 					fileData.setFileType(analysisFileEntity.getFileType());
 					fileData.setFileExtension(analysisFileEntity.getFileExtension());
+					fileData.setFileExtensionMetadata(analysisFileEntity.getFileExtensionMetadata());
 					fileData.setFileData(analysisFileEntity.getFileData());
 					fileData.setCreatedTimestamp(
 							LADUtils.formatDatetoTimestamp(analysisFileEntity.getCreatedDate()));
@@ -105,6 +106,7 @@ public class AnalysisPeerLTMServiceImpl implements AnalysisPeerLTMService {
 					analysisPeerFilesLTMEntity.setFileName(file.getFileName());
 					analysisPeerFilesLTMEntity.setFileType(file.getFileType());
 					analysisPeerFilesLTMEntity.setFileExtension(file.getFileExtension());
+					analysisPeerFilesLTMEntity.setFileExtensionMetadata(file.getFileExtensionMetadata());
 					if(file.getFileBase64Data() != null) {
 						byte[] fileByte = Base64.getDecoder().decode(file.getFileBase64Data());
 						analysisPeerFilesLTMEntity.setFileData(fileByte);
