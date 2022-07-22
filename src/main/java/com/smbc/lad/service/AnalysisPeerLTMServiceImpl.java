@@ -138,6 +138,8 @@ public class AnalysisPeerLTMServiceImpl implements AnalysisPeerLTMService {
 			fileData.setId(analysisPeerFilesLTMEntity.getId());
 			fileData.setPipelineId(analysisPeerFilesLTMEntity.getPipelineId());
 			fileData.setFileName(analysisPeerFilesLTMEntity.getFileName());
+			fileData.setFileExtension(analysisPeerFilesLTMEntity.getFileExtension());
+			fileData.setFileExtensionMetadata(analysisPeerFilesLTMEntity.getFileExtensionMetadata());
 			fileData.setFileType(analysisPeerFilesLTMEntity.getFileType());
 			fileData.setFileData(analysisPeerFilesLTMEntity.getFileData());
 			fileData.setCreatedTimestamp(
