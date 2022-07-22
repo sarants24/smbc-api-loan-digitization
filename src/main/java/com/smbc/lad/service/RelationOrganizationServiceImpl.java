@@ -95,7 +95,7 @@ public class RelationOrganizationServiceImpl implements RelationOrganizationServ
 					fileDataEntity.setFileName(file.getFileName());
 					fileDataEntity.setFileType(file.getFileType());
 					fileDataEntity.setFileExtension(file.getFileExtension());
-					fileDataEntity.setFileExtensionMetadata(fileDataEntity.getFileExtensionMetadata());
+					fileDataEntity.setFileExtensionMetadata(file.getFileExtensionMetadata());
 					if(file.getFileBase64Data() != null) {
 						byte[] fileByte = Base64.getDecoder().decode(file.getFileBase64Data());
 						fileDataEntity.setFileData(fileByte);
