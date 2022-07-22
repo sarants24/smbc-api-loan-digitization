@@ -127,11 +127,12 @@ public class RelationOrganizationServiceImpl implements RelationOrganizationServ
 			fileData.setPipelineId(fileDataEntity.getPipelineId());
 			fileData.setFileName(fileDataEntity.getFileName());
 			fileData.setFileType(fileDataEntity.getFileType());
+			fileData.setFileExtension(fileDataEntity.getFileExtension());
+			fileData.setFileExtensionMetadata(fileDataEntity.getFileExtensionMetadata());
 			fileData.setFileData(fileDataEntity.getFileData());
 			fileData.setCreatedTimestamp(
 					LADUtils.formatDatetoTimestamp(fileDataEntity.getCreatedDate()));
 			  String s = new String(fileDataEntity.getFileData(), StandardCharsets.UTF_8);
-			  System.out.println("File ..." + s);
 		}
 		
 		return fileData;
