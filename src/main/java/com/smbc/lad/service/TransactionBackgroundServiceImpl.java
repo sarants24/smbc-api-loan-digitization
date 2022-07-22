@@ -76,6 +76,7 @@ public class TransactionBackgroundServiceImpl implements TransactionBackgroundSe
 					fileData.setFileName(transFileEntity.getFileName());
 					fileData.setFileType(transFileEntity.getFileType());
 					fileData.setFileExtension(transFileEntity.getFileExtension());
+					fileData.setFileExtensionMetadata(transFileEntity.getFileExtensionMetadata());
 					fileData.setFileData(transFileEntity.getFileData());
 					fileData.setCreatedTimestamp(
 							LADUtils.formatDatetoTimestamp(transFileEntity.getCreatedDate()));
@@ -132,6 +133,7 @@ public class TransactionBackgroundServiceImpl implements TransactionBackgroundSe
 					transactionFilesEntity.setFileName(file.getFileName());
 					transactionFilesEntity.setFileType(file.getFileType());
 					transactionFilesEntity.setFileExtension(file.getFileExtension());
+					transactionFilesEntity.setFileExtensionMetadata(file.getFileExtensionMetadata());
 					if(file.getFileBase64Data() != null) {
 						byte[] fileByte = Base64.getDecoder().decode(file.getFileBase64Data());
 						transactionFilesEntity.setFileData(fileByte);
