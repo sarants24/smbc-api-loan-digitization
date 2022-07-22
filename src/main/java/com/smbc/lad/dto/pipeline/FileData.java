@@ -7,6 +7,7 @@ public class FileData {
 	private String fileName;
 	private String fileType;
 	private String fileExtension;
+	private String fileExtensionMetadata;
 	private byte[] fileData;
 	private String fileBase64Data;
 	private String createdTimestamp;
@@ -40,6 +41,13 @@ public class FileData {
 	}
 	public void setFileExtension(String fileExtension) {
 		this.fileExtension = fileExtension;
+	}
+	public String getFileExtensionMetadata() {
+		return fileExtensionMetadata;
+	}
+
+	public void setFileExtensionMetadata(String fileExtensionMetadata) {
+		this.fileExtensionMetadata = fileExtensionMetadata;
 	}
 	public byte[] getFileData() {
 		return fileData;
