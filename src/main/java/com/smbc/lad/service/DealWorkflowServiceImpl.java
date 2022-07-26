@@ -86,7 +86,7 @@ public class DealWorkflowServiceImpl implements DealWorkflowService {
 	public String addOrUpdateDealWorkflowById(int pipelineId,
 			DealWorkflow dealWorkflow) throws Exception {
 		
-		(PipelineDealsBasics pipelineDetails = pipelineDealsService.getPipelineDetailsById(pipelineId);
+		PipelineDealsBasics pipelineDetails = pipelineDealsService.getPipelineDetailsById(pipelineId);
 		
 		pipelineDetails.setPmgOfficer(dealWorkflow.getPmgOfficer());
 		pipelineDetails.setReceiptDealDate(dealWorkflow.getDateReceived());
