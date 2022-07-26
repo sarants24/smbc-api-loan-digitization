@@ -86,7 +86,7 @@ public class DealWorkflowServiceImpl implements DealWorkflowService {
 	public String addOrUpdateDealWorkflowById(int pipelineId,
 			DealWorkflow dealWorkflow) throws Exception {
 		
-		/*(PipelineDealsBasics pipelineDetails = pipelineDealsService.getPipelineDetailsById(pipelineId);
+		(PipelineDealsBasics pipelineDetails = pipelineDealsService.getPipelineDetailsById(pipelineId);
 		
 		pipelineDetails.setPmgOfficer(dealWorkflow.getPmgOfficer());
 		pipelineDetails.setReceiptDealDate(dealWorkflow.getDateReceived());
@@ -99,7 +99,7 @@ public class DealWorkflowServiceImpl implements DealWorkflowService {
 			pipelineDetails.getPipelineDealsCredit().setTargetCatfDate(dealWorkflow.getCatfDate());
 		}
 		pipelineDealsService.updatePipelineDetailsById(pipelineId, pipelineDetails);
-		*/
+		
 		DealWorkflowEntity dealWorkflowEntity = new DealWorkflowEntity();
 		dealWorkflowEntity.setPipelineId(dealWorkflow.getPipelineId());
 		dealWorkflowEntity.setSunId(dealWorkflow.getSunId());
