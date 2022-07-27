@@ -7,7 +7,7 @@ import com.smbc.lad.dto.pipeline.CapitalRequestForm;
 import com.smbc.lad.dto.pipeline.PMGCATFDecision;
 import com.smbc.lad.dto.pipeline.PipelineDealsBasics;
 import com.smbc.lad.entity.pipeline.CapitalRequestFormEntity;
-import com.smbc.lad.entity.pipeline.pipelineDealsBasicsEntity;
+import com.smbc.lad.entity.pipeline.PipelineDealsBasicsEntity;
 import com.smbc.lad.entity.pipeline.PMGCATFDecisionEntity;
 import com.smbc.lad.repository.pipeline.CapitalRequestFormRepo;
 import com.smbc.lad.repository.pipeline.PMGCATFDecisionRepo;
