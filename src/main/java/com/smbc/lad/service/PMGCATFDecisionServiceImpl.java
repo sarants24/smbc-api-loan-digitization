@@ -7,6 +7,7 @@ import com.smbc.lad.dto.pipeline.CapitalRequestForm;
 import com.smbc.lad.dto.pipeline.PMGCATFDecision;
 import com.smbc.lad.dto.pipeline.PipelineDealsBasics;
 import com.smbc.lad.entity.pipeline.CapitalRequestFormEntity;
+import com.smbc.lad.entity.pipeline.pipelineDealsBasicsEntity;
 import com.smbc.lad.entity.pipeline.PMGCATFDecisionEntity;
 import com.smbc.lad.repository.pipeline.CapitalRequestFormRepo;
 import com.smbc.lad.repository.pipeline.PMGCATFDecisionRepo;
@@ -50,6 +51,7 @@ public class PMGCATFDecisionServiceImpl implements PMGCATFDecisionService {
 		
 		pmgCATFDecision.setPipelineId(pipelineId);
 		if(pipelineDetails != null) {
+			pmgCATFDecision.setPortfolioManagerId(pipelineDetails.getPmgOfficer());
 			pmgCATFDecision.setPortfolioManager(pipelineDetails.getPmgOfficerName());
 			pmgCATFDecision.setBorrowerId(pipelineDetails.getSunId());
 			pmgCATFDecision.setBorrowerName(pipelineDetails.getBorrowerName());
@@ -165,11 +167,12 @@ public class PMGCATFDecisionServiceImpl implements PMGCATFDecisionService {
 		
 		PMGCATFDecisionEntity pmgCATFDecisionEntity = new PMGCATFDecisionEntity();
 		
-		PipelineDealsBasics pipelineDetails = pipelineDealsService.getPipelineDetailsById(pipelineId);
+		PipelineDealsBasicsEntity pipelineDealsBasicsEntity = pipelineDealsService.getPipelineDealsBasicsEntity(pipelineId);
+		pipelineDealsBasicsEntity.setPmgOfficer(pmgCATFDecision.getPortfolioManagerId());
+		pipelineDealsService.savePipelineDealsBasicsEntity(pipelineDealsBasicsEntity);
 
-		
 		pmgCATFDecisionEntity.setPipelineId(pipelineId);
-		pmgCATFDecisionEntity.setSunId(pipelineDetails.getSunId());
+		pmgCATFDecisionEntity.setSunId(pipelineDealsBasicsEntity.getSunId());
 		pmgCATFDecisionEntity.setProformaGlobalGroup(pmgCATFDecision.getProformaGlobalGroup());
 		pmgCATFDecisionEntity.setProjectedRofa(pmgCATFDecision.getProjectedRofa());
 		pmgCATFDecisionEntity.setProjectedGrossProfit(pmgCATFDecision.getProjectedGrossProfit());
