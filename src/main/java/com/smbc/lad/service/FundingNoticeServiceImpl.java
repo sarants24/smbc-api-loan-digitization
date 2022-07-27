@@ -65,9 +65,9 @@ public class FundingNoticeServiceImpl implements FundingNoticeService {
 					if(fundingTermsEntity.getCurrencyEntity() != null) {
 						fundingTerms.setCurrencyDescription(fundingTermsEntity.getCurrencyEntity().getDescription());
 					}
-					fundingTerms.setDays(fundingTerms.getDays());
+					fundingTerms.setDays(fundingTermsEntity.getDays());
 					fundingTerms.setTotalAmount(fundingTermsEntity.getTotalAmount());
-					fundingTerms.setFundingType(fundingTermsEntity.getFundingTpe());
+					fundingTerms.setFundingType(fundingTermsEntity.getFundingType());
 					fundingTerms.setNoticeTime(fundingTermsEntity.getNoticeTime());
 					
 					fundingTermsCollection.add(fundingTerms);
@@ -119,7 +119,7 @@ public class FundingNoticeServiceImpl implements FundingNoticeService {
 						LADUtils.setNullIfEmpty(fundingTerms.getCurrencyCode()));
 					fundingTermsEntity.setDays(fundingTerms.getDays());
 					fundingTermsEntity.setTotalAmount(fundingTerms.getTotalAmount());
-					fundingTermsEntity.setFundingType(fundingTerms.getFundingTpe());
+					fundingTermsEntity.setFundingType(fundingTerms.getFundingType());
 					fundingTermsEntity.setNoticeTime(fundingTerms.getNoticeTime());
 					
 					fundingTermsRepo.save(fundingTermsEntity);
@@ -148,9 +148,9 @@ public class FundingNoticeServiceImpl implements FundingNoticeService {
 			if(fundingTermsEntity.getCurrencyEntity() != null) {
 				fundingTerms.setCurrencyDescription(fundingTermsEntity.getCurrencyEntity().getDescription());
 			}
-			fundingTerms.setDays(fundingTerms.getDays());
+			fundingTerms.setDays(fundingTermsEntity.getDays());
 			fundingTerms.setTotalAmount(fundingTermsEntity.getTotalAmount());
-			fundingTerms.setFundingType(fundingTermsEntity.getFundingTpe());
+			fundingTerms.setFundingType(fundingTermsEntity.getFundingType());
 			fundingTerms.setNoticeTime(fundingTermsEntity.getNoticeTime());
 		}
 		
