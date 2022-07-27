@@ -5,6 +5,7 @@ public class PMGCATFDecision {
 	private int pipelineId;
 	private String sunId;
 	private String portfolioManager;
+	private String portfolioManagerId;
 	private String borrowerId;
 	private String borrowerName;
 	private String parentId;
@@ -62,6 +63,12 @@ public class PMGCATFDecision {
 	}
 	public void setSunId(String sunId) {
 		this.sunId = sunId;
+	}
+	public String getPortfolioManagerId() {
+		return portfolioManagerId;
+	}
+	public void setPortfolioManagerId(String portfolioManagerId) {
+		this.portfolioManagerId = portfolioManagerId;
 	}
 	public String getPortfolioManager() {
 		return portfolioManager;
