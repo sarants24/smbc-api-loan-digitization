@@ -14,6 +14,7 @@ import com.smbc.lad.entity.pipeline.FundingTermsEntity;
 import com.smbc.lad.repository.pipeline.DealWorkflowRepo;
 import com.smbc.lad.repository.pipeline.FundingNoticeRepo;
 import com.smbc.lad.repository.pipeline.FundingTermsRepo;
+import com.smbc.lad.utils.LADUtils;
 
 
 /**
@@ -113,7 +114,8 @@ public class FundingNoticeServiceImpl implements FundingNoticeService {
 					fundingTermsEntity.setId(fundingTerms.getId());
 					fundingTermsEntity.setPipelineId(fundingTerms.getPipelineId());
 					
-					fundingTermsEntity.setCurrencyCode(fundingTerms.getCurrencyCode());
+					fundingTermsEntity.setCurrencyCode(
+						LADUtils.setNullIfEmpty(fundingTerms.getCurrencyCode()));
 					fundingTermsEntity.setDays(fundingTerms.getDays());
 					fundingTermsEntity.setTotalAmount(fundingTerms.getTotalAmount());
 					fundingTermsEntity.setNoticeTime(fundingTerms.getNoticeTime());
