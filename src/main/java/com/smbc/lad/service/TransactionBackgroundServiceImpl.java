@@ -1,6 +1,5 @@
 package com.smbc.lad.service;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -161,11 +160,10 @@ public class TransactionBackgroundServiceImpl implements TransactionBackgroundSe
 			fileData.setId(transactionFilesEntity.getId());
 			fileData.setPipelineId(transactionFilesEntity.getPipelineId());
 			fileData.setFileType(transactionFilesEntity.getFileType());
+			fileData.setFileName(transactionFilesEntity.getFileName());
 			fileData.setFileExtension(transactionFilesEntity.getFileExtension());
 			fileData.setFileExtensionMetadata(transactionFilesEntity.getFileExtensionMetadata());
 			fileData.setFileData(transactionFilesEntity.getFileData());
-			
-			  String s = new String(transactionFilesEntity.getFileData(), StandardCharsets.UTF_8);
 		}
 		
 		return fileData;
