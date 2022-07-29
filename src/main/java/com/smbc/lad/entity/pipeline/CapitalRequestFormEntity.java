@@ -72,7 +72,7 @@ public class CapitalRequestFormEntity {
 	private String sameDayFunding;
 
 	@Column(name = "agent_notice_message")
-	private Date agentNoticeMessage;
+	private String agentNoticeMessage;
 
 	@Column(name = "group_exposure")
 	private String groupExposure;
@@ -284,11 +284,11 @@ public class CapitalRequestFormEntity {
 		this.sameDayFunding = sameDayFunding;
 	}
 
-	public Date getAgentNoticeMessage() {
+	public String getAgentNoticeMessage() {
 		return agentNoticeMessage;
 	}
 
-	public void setAgentNoticeMessage(Date agentNoticeMessage) {
+	public void setAgentNoticeMessage(String agentNoticeMessage) {
 		this.agentNoticeMessage = agentNoticeMessage;
 	}
 
