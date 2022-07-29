@@ -130,8 +130,7 @@ public class CapitalRequestFormServiceImpl implements CapitalRequestFormService 
 			capitalRequestForm.setExternalDeadline(
 					LADUtils.formatDatetoString(capitalRequestFormEntity.getExternalDeadline()));
 			capitalRequestForm.setSameDayFunding(capitalRequestFormEntity.getSameDayFunding());
-			capitalRequestForm.setAgentNoticeMessage(
-					LADUtils.formatDatetoString(capitalRequestFormEntity.getAgentNoticeMessage()));
+			capitalRequestForm.setAgentNoticeMessage(capitalRequestFormEntity.getAgentNoticeMessage());
 			capitalRequestForm.setGroupExposure(capitalRequestFormEntity.getGroupExposure());
 			capitalRequestForm.setCdadWatchlist(capitalRequestFormEntity.getCdadWatchlist());
 			capitalRequestForm.setInterestPeriod(capitalRequestFormEntity.getInterestPeriod());
@@ -228,8 +227,7 @@ public class CapitalRequestFormServiceImpl implements CapitalRequestFormService 
 		capitalRequestFormEntity.setExternalDeadline(
 					LADUtils.formatStringtoDate(capitalRequestForm.getExternalDeadline()));
 		capitalRequestFormEntity.setSameDayFunding(capitalRequestForm.getSameDayFunding());
-		capitalRequestFormEntity.setAgentNoticeMessage(
-					LADUtils.formatStringtoDate(capitalRequestForm.getAgentNoticeMessage()));
+		capitalRequestFormEntity.setAgentNoticeMessage(capitalRequestForm.getAgentNoticeMessage());
 		capitalRequestFormEntity.setGroupExposure(capitalRequestForm.getGroupExposure());
 		capitalRequestFormEntity.setCdadWatchlist(capitalRequestForm.getCdadWatchlist());
 		capitalRequestFormEntity.setInterestPeriod(capitalRequestForm.getInterestPeriod());
